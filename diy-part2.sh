@@ -18,3 +18,7 @@
 
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
+
+# 修改京东云一代 5G 信号 EEPROM 偏移量 (从默认 0x0 修正为 0x8000)
+# 这一步是解决 6dBm 的关键
+sed -i 's/mediatek,mtd-eeprom = <&factory 0x0>/mediatek,mtd-eeprom = <&factory 0x8000>/g' target/linux/ramips/dts/mt7621_jdcloud_re-sp-01b.dts
