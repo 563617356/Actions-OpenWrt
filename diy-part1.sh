@@ -16,3 +16,5 @@
 # Add a feed source
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+# 添加闭源驱动专用插件源，这一步没做，后面所有的设置都是白搭
+echo 'src-git mtwifi https://github.com/NateLol/luci-app-mtwifi.git' >> feeds.conf.default
